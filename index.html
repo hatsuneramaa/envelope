@@ -34,32 +34,8 @@
       </a>
   </div>
         <!-- Audio element -->
-        <audio id="musik" src="blue" type="audio/mp3" loop autoplay></audio>
+        <audio id="musik" src="blue.mp3" type="audio/mp3" loop autoplay></audio>
     </div>
-
-<script>
-        // Menyiapkan variabel musik
-        var musik = "old_love.mp3";
-        var audio = document.getElementById('musik');
-
-        // Fungsi untuk memulai musik otomatis saat halaman dimuat
-        function mulai() {
-            // Cobalah untuk memutar musik saat halaman dimuat
-            audio.play().catch(function(error) {
-                // Jika autoplay gagal, kita akan memanggil interaksi fallback
-                console.log("Autoplay gagal, mencoba fallback");
-                // Kita tambahkan fallback untuk menunggu interaksi pengguna
-                document.body.addEventListener('click', function() {
-                    audio.play().catch(function(error) {
-                        console.log("Masih gagal memutar musik.");
-                    });
-                });
-            });
-        }
-
-        // Pastikan pemutaran musik dipanggil segera saat halaman dimuat
-        window.onload = mulai;
-
   <script
   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
